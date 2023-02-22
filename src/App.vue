@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Search msg="Welcome to Your Vue.js App" />
+    <Search />
+    <NodeComponent />
   </div>
 </template>
 
@@ -8,11 +9,13 @@
 import { defineComponent, ref } from 'vue';
 
 import Search from './components/Search.vue';
+import NodeComponent from './components/NodeComponent.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     Search,
+    NodeComponent,
   },
 });
 </script>
