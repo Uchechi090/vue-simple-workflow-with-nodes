@@ -14,7 +14,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 
-import { nodeList } from '../data/nodeList.ts';
+import { nodeList } from './data';
 
 export default defineComponent({
   name: 'Search',
@@ -22,10 +22,12 @@ export default defineComponent({
   setup(_, { root }) {
     const searchTerm = ref('');
 
-    const performSearch = () =>
+    const performSearch = () => {
+      console.log(nodeList);
       nodeList.filter((node) => {
-        return node.title.toLowerCase().includes(searchTerm.toLowerCase());
+        return node.name.toLowerCase().includes(searchTerm.value.toLowerCase());
       });
+    };
 
     return {
       searchTerm,
