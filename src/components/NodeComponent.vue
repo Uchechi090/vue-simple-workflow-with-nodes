@@ -23,14 +23,14 @@ export default defineComponent({
     };
 
     const elements = ref([
-      {
-        id: '1',
-        type: 'toolbar',
-        label: 'toolbar top',
-        data: { toolbarPosition: Position.Top },
-        position: { x: 200, y: 0 },
-        style: defaultNodeStyle,
-      },
+      // {
+      //   id: '1',
+      //   type: 'toolbar',
+      //   label: 'toolbar top',
+      //   data: { toolbarPosition: Position.Top },
+      //   position: { x: 200, y: 0 },
+      //   style: defaultNodeStyle,
+      // },
       {
         id: '2',
         type: 'toolbar',
@@ -39,14 +39,14 @@ export default defineComponent({
         position: { x: -50, y: 100 },
         style: defaultNodeStyle,
       },
-      {
-        id: '3',
-        type: 'toolbar',
-        label: 'toolbar bottom',
-        data: { toolbarPosition: Position.Bottom },
-        position: { x: 0, y: 200 },
-        style: defaultNodeStyle,
-      },
+      // {
+      //   id: '3',
+      //   type: 'toolbar',
+      //   label: 'toolbar bottom',
+      //   data: { toolbarPosition: Position.Bottom },
+      //   position: { x: 0, y: 200 },
+      //   style: defaultNodeStyle,
+      // },
       {
         id: '4',
         type: 'toolbar',
