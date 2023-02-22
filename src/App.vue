@@ -5,15 +5,7 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  computed,
-  reactive,
-  toRefs,
-  watch,
-  onMounted,
-  ref
-} from '@vue/composition-api'
+import { defineComponent, ref } from 'vue';
 
 import Search from './components/Search.vue';
 

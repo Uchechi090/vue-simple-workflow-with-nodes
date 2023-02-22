@@ -14,7 +14,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 
-import { nodeList } from '../utils/nodeList.ts';
+import { nodeList } from '../data/nodeList.ts';
 
 export default defineComponent({
   name: 'Search',
