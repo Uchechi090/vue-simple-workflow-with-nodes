@@ -24,17 +24,13 @@ export default defineComponent({
   components: {},
   setup(_, { root }) {
     const searchTerm = ref('');
-    const filteredList = ref([]);
+    const filteredList = ref();
 
     const performSearch = () => {
       console.log(nodeList);
-      filteredList.value.push(
-        nodeList.filter((node) => {
-          return node.name
-            .toLowerCase()
-            .includes(searchTerm.value.toLowerCase());
-        })
-      );
+      filteredList.value = nodeList.filter((node) => {
+        return node.name.toLowerCase().includes(searchTerm.value.toLowerCase());
+      });
       console.log(filteredList.value);
     };
 
