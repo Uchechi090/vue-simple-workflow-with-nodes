@@ -1,9 +1,21 @@
 <template>
-  <VueFlow v-model="elements" fit-view-on-init class="vue-flow-basic-example">
-    <template #node-toolbar="nodeProps">
-      <SwitchNode :data="nodeProps.data" :label="nodeProps.label" />
-    </template>
-  </VueFlow>
+  <div class="container">
+    <VueFlow
+      :width="250"
+      :height="600"
+      v-model="elements"
+      fit-view-on-init
+      class="vue-flow"
+      class="basicflow"
+      :default-viewport="{ zoom: 1.5 }"
+      :min-zoom="0.2"
+      :max-zoom="4"
+    >
+      <template #node-toolbar="nodeProps">
+        <SwitchNode :data="nodeProps.data" :label="nodeProps.label" />
+      </template>
+    </VueFlow>
+  </div>
 </template>
 
 <script lang="ts">
@@ -22,46 +34,54 @@ export default defineComponent({
       borderRadius: '99px',
     };
 
+    const sourceStyle = {
+      background: '#fc8a00',
+      color: 'white',
+      borderRadius: '2px',
+      width: '40px',
+      textAlign: 'center',
+    };
+
+    const manipulatorStyle = {
+      background: '#ffdd1a',
+      color: 'white',
+      borderRadius: '2px',
+      width: '40px',
+      textAlign: 'center',
+    };
+
+    const predictorStyle = {
+      background: '#00cc44',
+      color: 'white',
+      borderRadius: '2px',
+      width: '40px',
+      textAlign: 'center',
+    };
+
     const elements = ref([
-      // {
-      //   id: '1',
-      //   type: 'toolbar',
-      //   label: 'toolbar top',
-      //   data: { toolbarPosition: Position.Top },
-      //   position: { x: 200, y: 0 },
-      //   style: defaultNodeStyle,
-      // },
       {
         id: '2',
         type: 'toolbar',
-        label: 'toolbar right',
+        // label: 'predictor',
         data: { toolbarPosition: Position.Right },
         position: { x: -50, y: 100 },
-        style: defaultNodeStyle,
+        style: predictorStyle,
       },
-      // {
-      //   id: '3',
-      //   type: 'toolbar',
-      //   label: 'toolbar bottom',
-      //   data: { toolbarPosition: Position.Bottom },
-      //   position: { x: 0, y: 200 },
-      //   style: defaultNodeStyle,
-      // },
       {
         id: '4',
         type: 'toolbar',
-        label: 'toolbar left',
+        // label: 'source',
         data: { toolbarPosition: Position.Left },
-        position: { x: 200, y: 300 },
-        style: defaultNodeStyle,
+        position: { x: 30, y: 500 },
+        style: sourceStyle,
       },
       {
         id: '5',
         type: 'toolbar',
-        label: 'toolbar always open',
+        // label: 'manipulator',
         data: { toolbarPosition: Position.Top, toolbarVisible: true },
         position: { x: 0, y: -100 },
-        style: defaultNodeStyle,
+        style: manipulatorStyle,
       },
     ]);
     return {
@@ -70,3 +90,15 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.container {
+  height: 800px;
+  width: 400px;
+
+  // .vue-flow {
+  //   height: 700px;
+  //   width: 300px;
+  // }
+}
+</style>
