@@ -42,3 +42,20 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.search {
+  width: 300px;
+  height: 30px;
+  border-width: 2px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+</style>
