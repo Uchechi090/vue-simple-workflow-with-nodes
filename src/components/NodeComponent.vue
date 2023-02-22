@@ -8,8 +8,8 @@
       class="vue-flow"
       class="basicflow"
       :default-viewport="{ zoom: 1.5 }"
-      :min-zoom="0.2"
-      :max-zoom="4"
+      :min-zoom="0.4"
+      :max-zoom="7"
     >
       <template #node-toolbar="nodeProps">
         <SwitchNode :data="nodeProps.data" :label="nodeProps.label" />
@@ -60,28 +60,49 @@ export default defineComponent({
 
     const elements = ref([
       {
-        id: '2',
-        type: 'toolbar',
-        // label: 'predictor',
-        data: { toolbarPosition: Position.Right },
-        position: { x: -50, y: 100 },
-        style: predictorStyle,
-      },
-      {
-        id: '4',
+        id: '1',
         type: 'toolbar',
         // label: 'source',
         data: { toolbarPosition: Position.Left },
-        position: { x: 30, y: 500 },
+        position: { x: -350, y: 150 },
         style: sourceStyle,
       },
       {
-        id: '5',
+        id: '2',
         type: 'toolbar',
         // label: 'manipulator',
-        data: { toolbarPosition: Position.Top, toolbarVisible: true },
-        position: { x: 0, y: -100 },
+        // data: { toolbarPosition: Position.Top, toolbarVisible: true },
+        data: { toolbarPosition: Position.Top },
+        position: { x: -180, y: 130 },
         style: manipulatorStyle,
+      },
+      {
+        id: '3',
+        type: 'toolbar',
+        // label: 'predictor',
+        data: { toolbarPosition: Position.Right },
+        position: { x: -30, y: 110 },
+        style: predictorStyle,
+      },
+      {
+        id: 'e1a-2',
+        source: '1',
+        sourceHandle: 'a',
+        target: '2',
+        style: () => ({
+          stroke: '#000000',
+          filter: 'invert(100%)',
+        }),
+      },
+      {
+        id: 'e1b-3',
+        source: '2',
+        sourceHandle: 'b',
+        target: '3',
+        style: () => ({
+          stroke: '#000000',
+          filter: 'invert(100%)',
+        }),
       },
     ]);
     return {
@@ -95,10 +116,5 @@ export default defineComponent({
 .container {
   height: 800px;
   width: 400px;
-
-  // .vue-flow {
-  //   height: 700px;
-  //   width: 300px;
-  // }
 }
 </style>
