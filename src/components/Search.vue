@@ -9,7 +9,9 @@
       name="search"
     />
     <ul v-for="(node, i) in filteredList" :key="i">
-      <li>{{ node.name }}</li>
+      <li>
+        <a>{{ node.name }}</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -56,6 +58,25 @@ export default defineComponent({
   &::-webkit-input-placeholder {
     font-size: 18px;
     font-weight: 100;
+  }
+}
+ul {
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: -19px 23px 0 22px;
+
+    a {
+      border: 1px solid #ddd;
+      background-color: #f6f6f6;
+      padding: 2px;
+      width: 300px;
+      text-decoration: none;
+      font-size: 13px;
+      color: black;
+      display: block;
+      cursor: pointer;
+    }
   }
 }
 </style>
