@@ -29,11 +29,9 @@ export default defineComponent({
     const filteredList = ref();
 
     const performSearch = () => {
-      console.log(nodeList);
       filteredList.value = nodeList.filter((node) => {
         return node.name.toLowerCase().includes(searchTerm.value.toLowerCase());
       });
-      console.log(filteredList.value);
     };
 
     return {

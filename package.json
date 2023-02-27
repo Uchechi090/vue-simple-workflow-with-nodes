@@ -8,11 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@vue-flow/background": "^1.0.5",
+    "@types/jest": "^29.4.0",
+    "@vue-flow/background": "1.0.5",
     "@vue-flow/core": "1.14.3",
-    "@vue-flow/core/dist/style.css": "*",
-    "@vue-flow/core/dist/theme-default.css": "*",
-    "@vue-flow/node-toolbar": "^1.0.5",
+    "@vue-flow/node-resizer": "^1.2.2",
+    "@vue-flow/node-toolbar": "1.0.6",
+    "@vue/compiler-dom": "^3.0.1",
+    "@vue/server-renderer": "^3.0.1",
+    "@vue/test-utils": "^2.3.0",
     "emmet": "2.3.6",
     "jest": "29.4.3",
     "node-notifier": "10.0.1",
