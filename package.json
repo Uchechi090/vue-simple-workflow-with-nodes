@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue-flow/background": "^1.0.5",
     "@vue-flow/core": "1.14.3",
     "@vue-flow/node-toolbar": "^1.0.5",
     "emmet": "2.3.6",
