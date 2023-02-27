@@ -24,10 +24,6 @@
         <SwitchNode :data="nodeProps.data" :label="nodeProps.label" />
       </template> -->
       <Background :pattern-color="'#aaa'" gap="8" />
-
-      <MiniMap />
-
-      <Controls />
     </VueFlow>
   </div>
 </template>
@@ -36,13 +32,11 @@
 import { defineComponent, ref, onMounted } from 'vue';
 import { VueFlow, useVueFlow, MarkerType, Position } from '@vue-flow/core';
 import { Background } from '@vue-flow/background';
-import { Controls } from '@vue-flow/controls';
-import { MiniMap } from '@vue-flow/minimap';
 
 import SwitchNode from './SwitchNode.vue';
 
 export default defineComponent({
-  components: { VueFlow, SwitchNode, Background, Controls, MiniMap },
+  components: { VueFlow, SwitchNode, Background },
   setup(_, { root }) {
     const sourceStyle = {
       background: '#fc8a00',
@@ -259,6 +253,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 // @import  '../main.css';
+@import '@vue-flow/core/dist/style.css';
+@import '@vue-flow/core/dist/theme-default.css';
 
 .container {
   height: 800px;

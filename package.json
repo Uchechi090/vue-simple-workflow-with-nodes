@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@vue-flow/background": "^1.0.5",
-    "@vue-flow/controls": "^1.0.4",
     "@vue-flow/core": "1.14.3",
-    "@vue-flow/minimap": "^1.0.4",
+    "@vue-flow/core/dist/style.css": "*",
+    "@vue-flow/core/dist/theme-default.css": "*",
     "@vue-flow/node-toolbar": "^1.0.5",
     "emmet": "2.3.6",
     "jest": "29.4.3",
